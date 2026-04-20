@@ -3,9 +3,9 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-REQUIRED_CUSTOMERS = ['customer_id', 'name', 'email', 'signup_date']
+REQUIRED_CUSTOMERS = ['customer_id', 'name', 'signup_date']
 REQUIRED_ORDERS    = ['order_id', 'customer_id', 'order_date', 'amount', 'product_category']
-REQUIRED_RETURNS   = ['return_id', 'order_id', 'return_date']
+REQUIRED_RETURNS   = ['order_id', 'return_date']
 
 def load_csv(path, required_cols):
     df = pd.read_csv(path)
